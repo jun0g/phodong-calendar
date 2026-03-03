@@ -12,33 +12,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="bg-white text-zinc-900 antialiased">
-        <div className="min-h-screen flex flex-col">
-          {/* Header */}
-          <header className="sticky top-0 z-50 border-b border-zinc-100 bg-white/80 backdrop-blur">
-            <div className="mx-auto max-w-6xl px-6 py-6 md:px-10">
-              <div className="flex items-center justify-between">
-                <h1 className="text-lg font-semibold tracking-tight md:text-xl">
-                  포동포동 달력
-                </h1>
-                <span className="text-sm text-zinc-400">
-                  @hyu_phodong
-                </span>
-              </div>
+      <body className="bg-white text-zinc-800 antialiased">
+        <div className="bg-white min-h-screen flex flex-col">
+          {/* Header (minimal) */}
+          <header className="border-b border-zinc-100 bg-black">
+            <div className="mx-auto max-w-4xl px-4 py-4">
+              <h1 className="m-0 text-center text-lg font-medium">
+                포동포동 달력
+              </h1>
             </div>
           </header>
 
           {/* Main */}
           <main className="flex-1">
-            <div className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-20">
+            <div className="mx-auto max-w-4xl px-4 py-8">
               {children}
             </div>
           </main>
 
-          {/* Footer */}
-          <footer className="border-t border-zinc-100 bg-white">
-            <div className="mx-auto max-w-6xl px-6 py-10 text-xs text-zinc-400 md:px-10">
-              © {new Date().getFullYear()} @hyu_phodong All rights reserved.
+          {/* Footer (minimal) */}
+          <footer className="border-t border-zinc-100 bg-black">
+            <div className="mx-auto max-w-4xl px-4 py-6 text-center text-xs text-zinc-800">
+              © {new Date().getFullYear()} @hyu_phodong. All rights reserved.
             </div>
           </footer>
         </div>
