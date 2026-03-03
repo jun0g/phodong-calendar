@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "포동포동 달력",
-  description: "사진 동아리 웹 달력 프로젝트",
+  title: "포동포동 - @hyu_phodong",
+  description: "포동포동을 위한 웹",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
           <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800 bg-black text-white">
             <div className="mx-auto max-w-4xl px-4 py-4">
               <h1 className="m-0 text-center text-lg font-medium text-white">
-                포동포동 달력
+                포동포동
               </h1>
             </div>
           </header>

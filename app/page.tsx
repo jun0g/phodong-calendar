@@ -28,26 +28,25 @@ export default async function Home() {
   }, {}) || {};
 
   return (
-    <div className="min-h-screen bg-white px-0 text-zinc-900">
+    <div className="bg-white px-0 text-zinc-900">
       <div className="space-y-12">
         {Object.entries(groupedByYear).map(([year, photos]) => (
           <section key={year}>
             <h2 className="mb-6 text-lg font-medium text-zinc-800">{year}</h2>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="flex gap-10 overflow-x-auto whitespace-nowrap pb-4">
               {photos.map((photo) => (
-                <div key={photo.id} className="">
-                  <div className="overflow-hidden rounded-md bg-white">
+                <div key={photo.id} className="relative flex flex-col shrink-0">
+                  <div className="flex justify-center overflow-hidden rounded-md bg-white">
                     <img
                       src={photo.image_url}
                       alt={photo.title}
-                      className="h-56 w-full object-cover"
+                      className="h-64 w-auto object-contain"
                     />
                   </div>
 
-                  <div className="mt-3 text-sm text-zinc-800">
-                    <div className="font-medium">{photo.year}년 {photo.month}월</div>
-                    <div className="text-xs">{photo.photographer}</div>
+                  <div className="mt-2 flex justify-end text-xs font-medium text-black">
+                    {photo.photographer}
                   </div>
                 </div>
               ))}
